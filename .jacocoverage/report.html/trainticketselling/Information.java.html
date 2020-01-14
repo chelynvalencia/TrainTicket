@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Information.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;TrainTicket&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">trainticketselling</a> &gt; <span class="el_source">Information.java</span></div><h1>Information.java</h1><pre class="source lang-java linenums">package trainticketselling;
+
+public class Information extends javax.swing.JFrame {
+
+<span class="nc" id="L5">    public Information() {</span>
+<span class="nc" id="L6">        initComponents();</span>
+<span class="nc" id="L7">        this.setLocationRelativeTo(null); //center form in the sreen</span>
+<span class="nc" id="L8">    }</span>
+    
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L14">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L15">        jScrollPane1 = new javax.swing.JScrollPane();</span>
+<span class="nc" id="L16">        jTextArea1 = new javax.swing.JTextArea();</span>
+<span class="nc" id="L17">        btn_close = new javax.swing.JButton();</span>
+<span class="nc" id="L18">        jLabel2 = new javax.swing.JLabel();</span>
+
+<span class="nc" id="L20">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L22">        jPanel1.setBackground(new java.awt.Color(44, 62, 80));</span>
+<span class="nc" id="L23">        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.MatteBorder(null), &quot;Contact &amp; Information&quot;, javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Stencil&quot;, 0, 14), new java.awt.Color(255, 153, 153))); // NOI18N</span>
+
+<span class="nc" id="L25">        jTextArea1.setEditable(false);</span>
+<span class="nc" id="L26">        jTextArea1.setBackground(new java.awt.Color(108, 122, 137));</span>
+<span class="nc" id="L27">        jTextArea1.setColumns(20);</span>
+<span class="nc" id="L28">        jTextArea1.setFont(new java.awt.Font(&quot;Tw Cen MT Condensed Extra Bold&quot;, 0, 16)); // NOI18N</span>
+<span class="nc" id="L29">        jTextArea1.setRows(5);</span>
+<span class="nc" id="L30">        jTextArea1.setText(&quot;PT. Kereta Api CCIT\n\nAddress\t : Gedung Enginering Center Lt. 1, FTUI Kampus\n\t  Baru UI Depok, Jalan Prof. DR. Ir R. Roosseno,\n\t  Kukusan, Beji, Kota Depok, Jawa Barat 16425\n\nPhone Number : 021-987654321\n\nWebsite\t  : www.ccit.eng.ui.ac.id&quot;);</span>
+<span class="nc" id="L31">        jScrollPane1.setViewportView(jTextArea1);</span>
+
+<span class="nc" id="L33">        btn_close.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L34">        btn_close.setFont(new java.awt.Font(&quot;Franklin Gothic Demi&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L35">        btn_close.setText(&quot;Close&quot;);</span>
+<span class="nc" id="L36">        btn_close.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L38">                btn_closeActionPerformed(evt);</span>
+<span class="nc" id="L39">            }</span>
+        });
+
+<span class="nc" id="L42">        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/trainticketselling/info-48-2.png&quot;))); // NOI18N</span>
+
+<span class="nc" id="L44">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L45">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L46">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L47">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L48">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L49">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L50">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L51">                        .addContainerGap()</span>
+<span class="nc" id="L52">                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE))</span>
+<span class="nc" id="L53">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L54">                        .addGap(210, 210, 210)</span>
+<span class="nc" id="L55">                        .addComponent(btn_close)</span>
+<span class="nc" id="L56">                        .addGap(0, 0, Short.MAX_VALUE)))</span>
+<span class="nc" id="L57">                .addContainerGap())</span>
+<span class="nc" id="L58">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L59">                .addGap(228, 228, 228)</span>
+<span class="nc" id="L60">                .addComponent(jLabel2)</span>
+<span class="nc" id="L61">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L63">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L64">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L65">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L66">                .addComponent(jLabel2)</span>
+<span class="nc" id="L67">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L68">                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L69">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)</span>
+<span class="nc" id="L70">                .addComponent(btn_close, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L71">                .addGap(15, 15, 15))</span>
+        );
+
+<span class="nc" id="L74">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L75">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L76">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L77">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L78">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+<span class="nc" id="L80">        layout.setVerticalGroup(</span>
+<span class="nc" id="L81">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L82">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+
+<span class="nc" id="L85">        pack();</span>
+<span class="nc" id="L86">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void btn_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_closeActionPerformed
+<span class="nc" id="L89">        this.setVisible(false);</span>
+<span class="nc" id="L90">    }//GEN-LAST:event_btn_closeActionPerformed</span>
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //&lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot; Look and feel setting code (optional) &quot;&gt;
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+<span class="nc bnc" id="L102" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L104">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L105">                    break;</span>
+                }
+            }
+<span class="nc" id="L108">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L109">            java.util.logging.Logger.getLogger(Information.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L110">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L111">            java.util.logging.Logger.getLogger(Information.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L112">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L113">            java.util.logging.Logger.getLogger(Information.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L114">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L115">            java.util.logging.Logger.getLogger(Information.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L116">        }</span>
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+
+        /* Create and display the form */
+<span class="nc" id="L123">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+            public void run() {
+<span class="nc" id="L125">                new Information().setVisible(true);</span>
+<span class="nc" id="L126">            }</span>
+        });
+<span class="nc" id="L128">    }</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_close;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    // End of variables declaration//GEN-END:variables
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Form.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;TrainTicket&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">trainticketselling</a> &gt; <span class="el_source">Form.java</span></div><h1>Form.java</h1><pre class="source lang-java linenums">package trainticketselling;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.lang.NullPointerException;
+
+public class Form extends javax.swing.JFrame {
+    int bussiness, economy, price, qty, totalprice, cash, change;
+    int z, x;
+    
+<span class="nc" id="L12">    public Form() {</span>
+<span class="nc" id="L13">        initComponents();</span>
+<span class="nc" id="L14">        this.setLocationRelativeTo(null); //center form in the sreen</span>
+<span class="nc" id="L15">        System.out.println(DataPT_KAC.n);</span>
+<span class="nc" id="L16">        Data();</span>
+<span class="nc" id="L17">        Button();</span>
+<span class="nc" id="L18">    }</span>
+    
+    public void Data() {
+<span class="nc" id="L21">        destination.addActionListener(new ActionListener() {</span>
+            @Override
+            public void actionPerformed(ActionEvent b){
+<span class="nc bnc" id="L24" title="All 2 branches missed.">            if(destination.getSelectedItem().equals(&quot;Choose Destination&quot;)) {</span>
+<span class="nc" id="L25">            buttonGroup1.clearSelection();</span>
+<span class="nc" id="L26">            txt_price.setText(&quot;&quot;);</span>
+            }
+<span class="nc bnc" id="L28" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Banyuwangi&quot;)) {</span>
+<span class="nc" id="L29">            bussiness=540000;</span>
+<span class="nc" id="L30">            economy=440000;</span>
+            }
+<span class="nc bnc" id="L32" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Surabaya&quot;)) {</span>
+<span class="nc" id="L33">            bussiness=450000;</span>
+<span class="nc" id="L34">            economy=230000;</span>
+            }
+<span class="nc bnc" id="L36" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Yogyakarta&quot;)) {</span>
+<span class="nc" id="L37">            bussiness=430000;</span>
+<span class="nc" id="L38">            economy=200000;</span>
+            }
+<span class="nc bnc" id="L40" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Solo&quot;)) {</span>
+<span class="nc" id="L41">            bussiness=400000;</span>
+<span class="nc" id="L42">            economy=260000;</span>
+            }
+<span class="nc bnc" id="L44" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Boyolali&quot;)) {</span>
+<span class="nc" id="L45">            bussiness=360000;</span>
+<span class="nc" id="L46">            economy=240000;</span>
+            }
+<span class="nc bnc" id="L48" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Semarang&quot;)) {</span>
+<span class="nc" id="L49">            bussiness=335000;</span>
+<span class="nc" id="L50">            economy=200000;</span>
+            }
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Tegal&quot;)) {</span>
+<span class="nc" id="L53">            bussiness=30000;</span>
+<span class="nc" id="L54">            economy=190000;</span>
+            }
+<span class="nc bnc" id="L56" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Brebes&quot;)) {</span>
+<span class="nc" id="L57">            bussiness=280000;</span>
+<span class="nc" id="L58">            economy=175000;</span>
+            }
+<span class="nc bnc" id="L60" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Cirebon&quot;)) {</span>
+<span class="nc" id="L61">            bussiness=275000;</span>
+<span class="nc" id="L62">            economy=150000;</span>
+            }
+<span class="nc bnc" id="L64" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Tasikmalaya&quot;)) {</span>
+<span class="nc" id="L65">            bussiness=250000;</span>
+<span class="nc" id="L66">            economy=145000;</span>
+            }
+<span class="nc bnc" id="L68" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Bandung&quot;)) {</span>
+<span class="nc" id="L69">            bussiness=245000;</span>
+<span class="nc" id="L70">            economy=12000;</span>
+            }
+<span class="nc bnc" id="L72" title="All 2 branches missed.">            else if(destination.getSelectedItem().equals(&quot;Depok&quot;)) {</span>
+<span class="nc" id="L73">            bussiness=10000;</span>
+<span class="nc" id="L74">            economy=50000;</span>
+<span class="nc" id="L75">            }}</span>
+        });
+<span class="nc" id="L77">        rb_bussiness.addActionListener(new ActionListener() {</span>
+            @Override
+            public void actionPerformed(ActionEvent b){
+<span class="nc bnc" id="L80" title="All 2 branches missed.">                if(rb_bussiness.isSelected()){</span>
+<span class="nc" id="L81">                txt_price.setText(String.valueOf(bussiness));}}</span>
+        });
+<span class="nc" id="L83">        rb_economy.addActionListener(new ActionListener() {</span>
+            @Override
+            public void actionPerformed(ActionEvent b){
+<span class="nc bnc" id="L86" title="All 2 branches missed.">                if(rb_economy.isSelected()){</span>
+<span class="nc" id="L87">                txt_price.setText(String.valueOf(economy));}}</span>
+        });
+<span class="nc" id="L89">        txt_cash.addActionListener(new ActionListener() {</span>
+            @Override
+            public void actionPerformed(ActionEvent b){
+<span class="nc" id="L92">                cash=Integer.parseInt(txt_cash.getText());</span>
+<span class="nc" id="L93">                change=Integer.parseInt(txt_totalprice.getText());</span>
+<span class="nc" id="L94">                totalprice=cash-change;</span>
+<span class="nc" id="L95">                txt_change.setText(String.valueOf(totalprice));}</span>
+        });
+<span class="nc" id="L97">        txt_qty.addActionListener(new ActionListener() {</span>
+            @Override
+            public void actionPerformed(ActionEvent b){
+<span class="nc" id="L100">                qty=Integer.parseInt(txt_qty.getText());</span>
+<span class="nc" id="L101">                price=Integer.parseInt(txt_price.getText());</span>
+<span class="nc" id="L102">                totalprice=cash*price;</span>
+<span class="nc" id="L103">                txt_totalprice.setText(String.valueOf(totalprice));}</span>
+        });
+<span class="nc" id="L105">    }</span>
+    
+    public void Button() {
+<span class="nc" id="L108">        btn_submit.addActionListener(new ActionListener() {</span>
+           @Override
+           public void actionPerformed(ActionEvent b){
+<span class="nc bnc" id="L111" title="All 2 branches missed.">               {for(z=0;z&lt;=DataPT_KAC.n;z++){</span>
+<span class="nc bnc" id="L112" title="All 2 branches missed.">                   if(DataPT_KAC.nInt[z][0] == Integer.parseInt(txt_routecode.getText())){</span>
+<span class="nc" id="L113">                       txt_routecode.setText(&quot;This route code has already existed&quot;);</span>
+<span class="nc" id="L114">                       x=1;</span>
+                   }
+                   else {
+<span class="nc" id="L117">                       DataPT_KAC.nString[DataPT_KAC.n][0] = (String) departure.getSelectedItem();</span>
+<span class="nc" id="L118">                       DataPT_KAC.nString[DataPT_KAC.n][1] = (String) destination.getSelectedItem();</span>
+<span class="nc" id="L119">                       DataPT_KAC.nString[DataPT_KAC.n][2] = (String) month.getSelectedItem();</span>
+<span class="nc" id="L120">                       DataPT_KAC.nString[DataPT_KAC.n][3] = (String) day.getSelectedItem();</span>
+<span class="nc" id="L121">                       DataPT_KAC.nInt[DataPT_KAC.n][1] = Integer.parseInt(txt_seatnumber.getText());</span>
+<span class="nc" id="L122">                       DataPT_KAC.nString[DataPT_KAC.n][4] = txt_name.getText();</span>
+<span class="nc" id="L123">                       DataPT_KAC.nInt[DataPT_KAC.n][2] = Integer.parseInt(txt_qty.getText());</span>
+<span class="nc" id="L124">                       DataPT_KAC.nInt[DataPT_KAC.n][3] = Integer.parseInt(txt_totalprice.getText());</span>
+<span class="nc" id="L125">                       DataPT_KAC.nInt[DataPT_KAC.n][4] = Integer.parseInt(txt_cash.getText());</span>
+<span class="nc" id="L126">                       DataPT_KAC.nInt[DataPT_KAC.n][5] = Integer.parseInt(txt_change.getText());</span>
+                   }
+               }
+<span class="nc" id="L129">               DataPT_KAC.nInt[DataPT_KAC.n][0] = Integer.parseInt(txt_routecode.getText());</span>
+<span class="nc" id="L130">               DataPT_KAC.n = DataPT_KAC.n + 1;</span>
+<span class="nc" id="L131">               new Receipt().setVisible(true);</span>
+<span class="nc" id="L132">               }} </span>
+        });
+<span class="nc" id="L134">    }</span>
+   
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L140">        buttonGroup1 = new javax.swing.ButtonGroup();</span>
+<span class="nc" id="L141">        jLabel11 = new javax.swing.JLabel();</span>
+<span class="nc" id="L142">        btng_class = new javax.swing.ButtonGroup();</span>
+<span class="nc" id="L143">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L144">        jLabel1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L145">        jPanel2 = new javax.swing.JPanel();</span>
+<span class="nc" id="L146">        jLabel2 = new javax.swing.JLabel();</span>
+<span class="nc" id="L147">        jLabel3 = new javax.swing.JLabel();</span>
+<span class="nc" id="L148">        jLabel4 = new javax.swing.JLabel();</span>
+<span class="nc" id="L149">        destination = new javax.swing.JComboBox&lt;&gt;();</span>
+<span class="nc" id="L150">        rb_bussiness = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L151">        rb_economy = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L152">        txt_price = new javax.swing.JTextField();</span>
+<span class="nc" id="L153">        jLabel12 = new javax.swing.JLabel();</span>
+<span class="nc" id="L154">        departure = new javax.swing.JComboBox&lt;&gt;();</span>
+<span class="nc" id="L155">        jLabel5 = new javax.swing.JLabel();</span>
+<span class="nc" id="L156">        jLabel6 = new javax.swing.JLabel();</span>
+<span class="nc" id="L157">        jLabel7 = new javax.swing.JLabel();</span>
+<span class="nc" id="L158">        jLabel8 = new javax.swing.JLabel();</span>
+<span class="nc" id="L159">        jLabel9 = new javax.swing.JLabel();</span>
+<span class="nc" id="L160">        jLabel10 = new javax.swing.JLabel();</span>
+<span class="nc" id="L161">        txt_seatnumber = new javax.swing.JTextField();</span>
+<span class="nc" id="L162">        txt_name = new javax.swing.JTextField();</span>
+<span class="nc" id="L163">        txt_qty = new javax.swing.JTextField();</span>
+<span class="nc" id="L164">        txt_totalprice = new javax.swing.JTextField();</span>
+<span class="nc" id="L165">        txt_cash = new javax.swing.JTextField();</span>
+<span class="nc" id="L166">        txt_change = new javax.swing.JTextField();</span>
+<span class="nc" id="L167">        btn_reset = new javax.swing.JButton();</span>
+<span class="nc" id="L168">        btn_back = new javax.swing.JButton();</span>
+<span class="nc" id="L169">        btn_submit = new javax.swing.JButton();</span>
+<span class="nc" id="L170">        jPanel3 = new javax.swing.JPanel();</span>
+<span class="nc" id="L171">        day = new javax.swing.JComboBox&lt;&gt;();</span>
+<span class="nc" id="L172">        month = new javax.swing.JComboBox&lt;&gt;();</span>
+<span class="nc" id="L173">        jLabel13 = new javax.swing.JLabel();</span>
+<span class="nc" id="L174">        txt_routecode = new javax.swing.JTextField();</span>
+
+<span class="nc" id="L176">        jLabel11.setText(&quot;jLabel11&quot;);</span>
+
+<span class="nc" id="L178">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L180">        jPanel1.setBackground(new java.awt.Color(44, 62, 80));</span>
+<span class="nc" id="L181">        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)), &quot;PT. Kereta Api CCIT&quot;, javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Stencil&quot;, 0, 14), new java.awt.Color(204, 204, 204))); // NOI18N</span>
+
+<span class="nc" id="L183">        jLabel1.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 0, 38)); // NOI18N</span>
+<span class="nc" id="L184">        jLabel1.setForeground(new java.awt.Color(255, 153, 153));</span>
+<span class="nc" id="L185">        jLabel1.setText(&quot;TRAIN TICKET FORM&quot;);</span>
+
+<span class="nc" id="L187">        jPanel2.setBackground(new java.awt.Color(51, 51, 51));</span>
+<span class="nc" id="L188">        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)), &quot;Train Data&quot;, javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Cambria&quot;, 1, 14), new java.awt.Color(255, 153, 153))); // NOI18N</span>
+
+<span class="nc" id="L190">        jLabel2.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L191">        jLabel2.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L192">        jLabel2.setText(&quot;Destination&quot;);</span>
+
+<span class="nc" id="L194">        jLabel3.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L195">        jLabel3.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L196">        jLabel3.setText(&quot;Class Type&quot;);</span>
+
+<span class="nc" id="L198">        jLabel4.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L199">        jLabel4.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L200">        jLabel4.setText(&quot;Price&quot;);</span>
+
+<span class="nc" id="L202">        destination.setModel(new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Choose&quot;, &quot;Banyuwangi&quot;, &quot;Surabaya&quot;, &quot;Yogyakarta&quot;, &quot;Solo&quot;, &quot;Boyolali&quot;, &quot;Semarang&quot;, &quot;Tegal&quot;, &quot;Brebes&quot;, &quot;Cirebon&quot;, &quot;Tasikmalaya&quot;, &quot;Bandung&quot;, &quot;Depok&quot; }));</span>
+
+<span class="nc" id="L204">        rb_bussiness.setBackground(new java.awt.Color(51, 51, 51));</span>
+<span class="nc" id="L205">        btng_class.add(rb_bussiness);</span>
+<span class="nc" id="L206">        rb_bussiness.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L207">        rb_bussiness.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L208">        rb_bussiness.setText(&quot;Bussiness&quot;);</span>
+
+<span class="nc" id="L210">        rb_economy.setBackground(new java.awt.Color(51, 51, 51));</span>
+<span class="nc" id="L211">        btng_class.add(rb_economy);</span>
+<span class="nc" id="L212">        rb_economy.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L213">        rb_economy.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L214">        rb_economy.setText(&quot;Economy&quot;);</span>
+
+<span class="nc" id="L216">        txt_price.setEditable(false);</span>
+<span class="nc" id="L217">        txt_price.setBackground(new java.awt.Color(108, 122, 137));</span>
+
+<span class="nc" id="L219">        jLabel12.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L220">        jLabel12.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L221">        jLabel12.setText(&quot;Departure&quot;);</span>
+
+<span class="nc" id="L223">        departure.setModel(new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Choose&quot;, &quot;Pasar Senen&quot;, &quot;Gambir&quot;, &quot;Jatinegara&quot; }));</span>
+
+<span class="nc" id="L225">        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);</span>
+<span class="nc" id="L226">        jPanel2.setLayout(jPanel2Layout);</span>
+<span class="nc" id="L227">        jPanel2Layout.setHorizontalGroup(</span>
+<span class="nc" id="L228">            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L229">            .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L230">                .addContainerGap()</span>
+<span class="nc" id="L231">                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L232">                    .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L233">                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L234">                            .addComponent(jLabel3)</span>
+<span class="nc" id="L235">                            .addComponent(jLabel4))</span>
+<span class="nc" id="L236">                        .addGap(16, 16, 16)</span>
+<span class="nc" id="L237">                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L238">                            .addComponent(txt_price)</span>
+<span class="nc" id="L239">                            .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L240">                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L241">                                    .addComponent(rb_economy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L242">                                    .addComponent(rb_bussiness, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+<span class="nc" id="L243">                                .addGap(7, 7, 7))))</span>
+<span class="nc" id="L244">                    .addGroup(jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L245">                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L246">                            .addComponent(jLabel12)</span>
+<span class="nc" id="L247">                            .addComponent(jLabel2))</span>
+<span class="nc" id="L248">                        .addGap(11, 11, 11)</span>
+<span class="nc" id="L249">                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L250">                            .addComponent(departure, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L251">                            .addComponent(destination, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))</span>
+<span class="nc" id="L252">                .addContainerGap())</span>
+        );
+<span class="nc" id="L254">        jPanel2Layout.setVerticalGroup(</span>
+<span class="nc" id="L255">            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L256">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()</span>
+<span class="nc" id="L257">                .addContainerGap()</span>
+<span class="nc" id="L258">                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L259">                    .addComponent(jLabel12)</span>
+<span class="nc" id="L260">                    .addComponent(departure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L261">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)</span>
+<span class="nc" id="L262">                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L263">                    .addComponent(jLabel2)</span>
+<span class="nc" id="L264">                    .addComponent(destination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L265">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L266">                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L267">                    .addComponent(jLabel3)</span>
+<span class="nc" id="L268">                    .addComponent(rb_bussiness))</span>
+<span class="nc" id="L269">                .addGap(4, 4, 4)</span>
+<span class="nc" id="L270">                .addComponent(rb_economy)</span>
+<span class="nc" id="L271">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L272">                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L273">                    .addComponent(txt_price, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L274">                    .addComponent(jLabel4))</span>
+<span class="nc" id="L275">                .addContainerGap())</span>
+        );
+
+<span class="nc" id="L278">        jLabel5.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L279">        jLabel5.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L280">        jLabel5.setText(&quot;Passenger Name&quot;);</span>
+
+<span class="nc" id="L282">        jLabel6.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L283">        jLabel6.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L284">        jLabel6.setText(&quot;Qty&quot;);</span>
+
+<span class="nc" id="L286">        jLabel7.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L287">        jLabel7.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L288">        jLabel7.setText(&quot;Seat Number&quot;);</span>
+
+<span class="nc" id="L290">        jLabel8.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L291">        jLabel8.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L292">        jLabel8.setText(&quot;Total Price&quot;);</span>
+
+<span class="nc" id="L294">        jLabel9.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L295">        jLabel9.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L296">        jLabel9.setText(&quot;Cash&quot;);</span>
+
+<span class="nc" id="L298">        jLabel10.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L299">        jLabel10.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L300">        jLabel10.setText(&quot;Change&quot;);</span>
+
+<span class="nc" id="L302">        txt_seatnumber.setBackground(new java.awt.Color(108, 122, 137));</span>
+<span class="nc" id="L303">        txt_seatnumber.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L305">                txt_seatnumberKeyTyped(evt);</span>
+<span class="nc" id="L306">            }</span>
+        });
+
+<span class="nc" id="L309">        txt_name.setBackground(new java.awt.Color(108, 122, 137));</span>
+
+<span class="nc" id="L311">        txt_qty.setBackground(new java.awt.Color(108, 122, 137));</span>
+<span class="nc" id="L312">        txt_qty.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L314">                txt_qtyKeyTyped(evt);</span>
+<span class="nc" id="L315">            }</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L317">                txt_qtyKeyReleased(evt);</span>
+<span class="nc" id="L318">            }</span>
+        });
+
+<span class="nc" id="L321">        txt_totalprice.setEditable(false);</span>
+<span class="nc" id="L322">        txt_totalprice.setBackground(new java.awt.Color(108, 122, 137));</span>
+
+<span class="nc" id="L324">        txt_cash.setBackground(new java.awt.Color(108, 122, 137));</span>
+<span class="nc" id="L325">        txt_cash.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L327">                txt_cashKeyTyped(evt);</span>
+<span class="nc" id="L328">            }</span>
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L330">                txt_cashKeyReleased(evt);</span>
+<span class="nc" id="L331">            }</span>
+        });
+
+<span class="nc" id="L334">        txt_change.setEditable(false);</span>
+<span class="nc" id="L335">        txt_change.setBackground(new java.awt.Color(108, 122, 137));</span>
+
+<span class="nc" id="L337">        btn_reset.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L338">        btn_reset.setFont(new java.awt.Font(&quot;Franklin Gothic Heavy&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L339">        btn_reset.setText(&quot;Reset&quot;);</span>
+<span class="nc" id="L340">        btn_reset.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L342">                btn_resetActionPerformed(evt);</span>
+<span class="nc" id="L343">            }</span>
+        });
+
+<span class="nc" id="L346">        btn_back.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L347">        btn_back.setFont(new java.awt.Font(&quot;Franklin Gothic Heavy&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L348">        btn_back.setText(&quot;Back&quot;);</span>
+<span class="nc" id="L349">        btn_back.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L351">                btn_backActionPerformed(evt);</span>
+<span class="nc" id="L352">            }</span>
+        });
+
+<span class="nc" id="L355">        btn_submit.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L356">        btn_submit.setFont(new java.awt.Font(&quot;Franklin Gothic Heavy&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L357">        btn_submit.setText(&quot;Submit&quot;);</span>
+
+<span class="nc" id="L359">        jPanel3.setBackground(new java.awt.Color(51, 51, 51));</span>
+<span class="nc" id="L360">        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)), &quot;Date&quot;, javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Cambria&quot;, 1, 14), new java.awt.Color(255, 153, 153))); // NOI18N</span>
+
+<span class="nc" id="L362">        day.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L363">        day.setModel(new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Day&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;14&quot;, &quot;15&quot;, &quot;16&quot;, &quot;17&quot;, &quot;18&quot;, &quot;19&quot;, &quot;20&quot;, &quot;21&quot;, &quot;22&quot;, &quot;23&quot;, &quot;24&quot;, &quot;25&quot;, &quot;26&quot;, &quot;27&quot;, &quot;28&quot;, &quot;29&quot;, &quot;30&quot;, &quot;31&quot; }));</span>
+<span class="nc" id="L364">        day.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L366">                dayActionPerformed(evt);</span>
+<span class="nc" id="L367">            }</span>
+        });
+
+<span class="nc" id="L370">        month.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L371">        month.setModel(new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Month&quot;, &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot; }));</span>
+
+<span class="nc" id="L373">        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);</span>
+<span class="nc" id="L374">        jPanel3.setLayout(jPanel3Layout);</span>
+<span class="nc" id="L375">        jPanel3Layout.setHorizontalGroup(</span>
+<span class="nc" id="L376">            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L377">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()</span>
+<span class="nc" id="L378">                .addContainerGap()</span>
+<span class="nc" id="L379">                .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L380">                .addGap(39, 39, 39)</span>
+<span class="nc" id="L381">                .addComponent(day, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L382">                .addContainerGap(16, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L384">        jPanel3Layout.setVerticalGroup(</span>
+<span class="nc" id="L385">            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L386">            .addGroup(jPanel3Layout.createSequentialGroup()</span>
+<span class="nc" id="L387">                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L388">                    .addComponent(day, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L389">                    .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L390">                .addGap(0, 8, Short.MAX_VALUE))</span>
+        );
+
+<span class="nc" id="L393">        jLabel13.setFont(new java.awt.Font(&quot;Lucida Grande&quot;, 1, 14)); // NOI18N</span>
+<span class="nc" id="L394">        jLabel13.setForeground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L395">        jLabel13.setText(&quot;Route Code&quot;);</span>
+
+<span class="nc" id="L397">        txt_routecode.setBackground(new java.awt.Color(108, 122, 137));</span>
+<span class="nc" id="L398">        txt_routecode.addKeyListener(new java.awt.event.KeyAdapter() {</span>
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+<span class="nc" id="L400">                txt_routecodeKeyTyped(evt);</span>
+<span class="nc" id="L401">            }</span>
+        });
+
+<span class="nc" id="L404">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L405">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L406">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L407">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L408">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L409">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L410">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L411">                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L412">                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+<span class="nc" id="L413">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L414">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L415">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L416">                        .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L417">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)</span>
+<span class="nc" id="L418">                        .addComponent(btn_back, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L419">                        .addGap(28, 28, 28)</span>
+<span class="nc" id="L420">                        .addComponent(btn_submit, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L421">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L422">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L423">                            .addComponent(jLabel5)</span>
+<span class="nc" id="L424">                            .addComponent(jLabel7)</span>
+<span class="nc" id="L425">                            .addComponent(jLabel13)</span>
+<span class="nc" id="L426">                            .addComponent(jLabel6)</span>
+<span class="nc" id="L427">                            .addComponent(jLabel8)</span>
+<span class="nc" id="L428">                            .addComponent(jLabel9)</span>
+<span class="nc" id="L429">                            .addComponent(jLabel10))</span>
+<span class="nc" id="L430">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L431">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="nc" id="L432">                            .addComponent(txt_seatnumber, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)</span>
+<span class="nc" id="L433">                            .addComponent(txt_name)</span>
+<span class="nc" id="L434">                            .addComponent(txt_qty)</span>
+<span class="nc" id="L435">                            .addComponent(txt_totalprice)</span>
+<span class="nc" id="L436">                            .addComponent(txt_cash)</span>
+<span class="nc" id="L437">                            .addComponent(txt_change, javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="nc" id="L438">                            .addComponent(txt_routecode, javax.swing.GroupLayout.Alignment.TRAILING))))</span>
+<span class="nc" id="L439">                .addContainerGap())</span>
+<span class="nc" id="L440">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L441">                .addGap(100, 100, 100)</span>
+<span class="nc" id="L442">                .addComponent(jLabel1)</span>
+<span class="nc" id="L443">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+        );
+<span class="nc" id="L445">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L446">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L447">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L448">                .addContainerGap()</span>
+<span class="nc" id="L449">                .addComponent(jLabel1)</span>
+<span class="nc" id="L450">                .addGap(18, 18, 18)</span>
+<span class="nc" id="L451">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L452">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L453">                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L454">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="nc" id="L455">                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L456">                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
+<span class="nc" id="L457">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L458">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L459">                            .addComponent(jLabel13)</span>
+<span class="nc" id="L460">                            .addComponent(txt_routecode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L461">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L462">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L463">                            .addComponent(jLabel7)</span>
+<span class="nc" id="L464">                            .addComponent(txt_seatnumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L465">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L466">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L467">                            .addComponent(jLabel5)</span>
+<span class="nc" id="L468">                            .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L469">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L470">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L471">                            .addComponent(jLabel6)</span>
+<span class="nc" id="L472">                            .addComponent(txt_qty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L473">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L474">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L475">                            .addComponent(jLabel8)</span>
+<span class="nc" id="L476">                            .addComponent(txt_totalprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="nc" id="L477">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L478">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L479">                            .addComponent(txt_cash, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L480">                            .addComponent(jLabel9))</span>
+<span class="nc" id="L481">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L482">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L483">                            .addComponent(txt_change, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L484">                            .addComponent(jLabel10))</span>
+<span class="nc" id="L485">                        .addGap(27, 27, 27)</span>
+<span class="nc" id="L486">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="nc" id="L487">                            .addComponent(btn_reset)</span>
+<span class="nc" id="L488">                            .addComponent(btn_back)</span>
+<span class="nc" id="L489">                            .addComponent(btn_submit))</span>
+<span class="nc" id="L490">                        .addGap(20, 20, 20))))</span>
+        );
+
+<span class="nc" id="L493">        jPanel2.getAccessibleContext().setAccessibleDescription(&quot;&quot;);</span>
+
+<span class="nc" id="L495">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L496">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L497">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L498">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L499">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+<span class="nc" id="L501">        layout.setVerticalGroup(</span>
+<span class="nc" id="L502">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L503">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+
+<span class="nc" id="L506">        pack();</span>
+<span class="nc" id="L507">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void txt_qtyKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_qtyKeyReleased
+        int a, b, c;
+<span class="nc" id="L511">        a=Integer.valueOf(txt_price.getText());</span>
+<span class="nc" id="L512">        b=Integer.valueOf(txt_qty.getText());</span>
+<span class="nc" id="L513">        c=a*b;</span>
+<span class="nc" id="L514">        txt_totalprice.setText(&quot;&quot;+c);</span>
+<span class="nc" id="L515">    }//GEN-LAST:event_txt_qtyKeyReleased</span>
+
+    private void txt_cashKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_cashKeyReleased
+        int a, b, c;
+<span class="nc" id="L519">        a=Integer.valueOf(txt_cash.getText());</span>
+<span class="nc" id="L520">        b=Integer.valueOf(txt_totalprice.getText());</span>
+<span class="nc" id="L521">        c=a-b;</span>
+<span class="nc" id="L522">        txt_change.setText(&quot;&quot;+c);</span>
+<span class="nc" id="L523">    }//GEN-LAST:event_txt_cashKeyReleased</span>
+
+    private void txt_routecodeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_routecodeKeyTyped
+<span class="nc" id="L526">        char karakter = evt.getKeyChar();</span>
+<span class="nc bnc" id="L527" title="All 10 branches missed.">        if(!(((karakter &gt;= '0') &amp;&amp; (karakter &lt;= '9') || (karakter == '-') || (karakter == KeyEvent.VK_BACK_SPACE) || (karakter == KeyEvent.VK_DELETE)))){</span>
+<span class="nc" id="L528">            getToolkit().beep();</span>
+<span class="nc" id="L529">            evt.consume();</span>
+        }
+<span class="nc" id="L531">    }//GEN-LAST:event_txt_routecodeKeyTyped</span>
+
+    private void txt_seatnumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_seatnumberKeyTyped
+<span class="nc" id="L534">        char karakter = evt.getKeyChar();</span>
+<span class="nc bnc" id="L535" title="All 8 branches missed.">        if(!(((karakter &gt;= '0') &amp;&amp; (karakter &lt;= '9') || (karakter == KeyEvent.VK_BACK_SPACE) || (karakter == KeyEvent.VK_DELETE)))){</span>
+<span class="nc" id="L536">            getToolkit().beep();</span>
+<span class="nc" id="L537">            evt.consume();</span>
+        }
+<span class="nc" id="L539">    }//GEN-LAST:event_txt_seatnumberKeyTyped</span>
+
+    private void txt_qtyKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_qtyKeyTyped
+<span class="nc" id="L542">        char karakter = evt.getKeyChar();</span>
+<span class="nc bnc" id="L543" title="All 8 branches missed.">        if(!(((karakter &gt;= '0') &amp;&amp; (karakter &lt;= '9') || (karakter == KeyEvent.VK_BACK_SPACE) || (karakter == KeyEvent.VK_DELETE)))){</span>
+<span class="nc" id="L544">            getToolkit().beep();</span>
+<span class="nc" id="L545">            evt.consume();</span>
+        }
+<span class="nc" id="L547">    }//GEN-LAST:event_txt_qtyKeyTyped</span>
+
+    private void txt_cashKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_cashKeyTyped
+<span class="nc" id="L550">        char karakter = evt.getKeyChar();</span>
+<span class="nc bnc" id="L551" title="All 8 branches missed.">        if(!(((karakter &gt;= '0') &amp;&amp; (karakter &lt;= '9') || (karakter == KeyEvent.VK_BACK_SPACE) || (karakter == KeyEvent.VK_DELETE)))){</span>
+<span class="nc" id="L552">            getToolkit().beep();</span>
+<span class="nc" id="L553">            evt.consume();</span>
+        }
+<span class="nc" id="L555">    }//GEN-LAST:event_txt_cashKeyTyped</span>
+
+    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L559">               buttonGroup1.clearSelection();</span>
+<span class="nc" id="L560">               btng_class.clearSelection();</span>
+<span class="nc" id="L561">               txt_price.setText(&quot;&quot;);</span>
+<span class="nc" id="L562">               departure.setSelectedItem(&quot;Choose&quot;);</span>
+<span class="nc" id="L563">               destination.setSelectedItem(&quot;Choose&quot;);</span>
+<span class="nc" id="L564">               txt_routecode.setText(&quot;&quot;);</span>
+<span class="nc" id="L565">               day.setSelectedItem(&quot;Day&quot;);</span>
+<span class="nc" id="L566">               month.setSelectedItem(&quot;Month&quot;);</span>
+<span class="nc" id="L567">               txt_seatnumber.setText(&quot;&quot;);</span>
+<span class="nc" id="L568">               txt_name.setText(&quot;&quot;);</span>
+<span class="nc" id="L569">               txt_totalprice.setText(&quot;&quot;);</span>
+<span class="nc" id="L570">               txt_qty.setText(&quot;&quot;);</span>
+<span class="nc" id="L571">               txt_cash.setText(&quot;&quot;);</span>
+<span class="nc" id="L572">               txt_change.setText(&quot;&quot;);</span>
+<span class="nc" id="L573">    }//GEN-LAST:event_btn_resetActionPerformed</span>
+
+    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
+<span class="nc" id="L576">        new Menu().setVisible(true);</span>
+<span class="nc" id="L577">               this.dispose();</span>
+<span class="nc" id="L578">    }//GEN-LAST:event_btn_backActionPerformed</span>
+
+    private void dayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dayActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L582">    }//GEN-LAST:event_dayActionPerformed</span>
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //&lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot; Look and feel setting code (optional) &quot;&gt;
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+<span class="nc bnc" id="L594" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L595" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L596">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L597">                    break;</span>
+                }
+            }
+<span class="nc" id="L600">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L601">            java.util.logging.Logger.getLogger(Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L602">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L603">            java.util.logging.Logger.getLogger(Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L604">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L605">            java.util.logging.Logger.getLogger(Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L606">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L607">            java.util.logging.Logger.getLogger(Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L608">        }</span>
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+
+        /* Create and display the form */
+<span class="nc" id="L615">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+            public void run() {
+<span class="nc" id="L617">                new Form().setVisible(true);</span>
+<span class="nc" id="L618">            }</span>
+        });
+<span class="nc" id="L620">    }</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_back;
+    private javax.swing.JButton btn_reset;
+    private javax.swing.JButton btn_submit;
+    private javax.swing.ButtonGroup btng_class;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox&lt;String&gt; day;
+    private javax.swing.JComboBox&lt;String&gt; departure;
+    private javax.swing.JComboBox&lt;String&gt; destination;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JComboBox&lt;String&gt; month;
+    private javax.swing.JRadioButton rb_bussiness;
+    private javax.swing.JRadioButton rb_economy;
+    private javax.swing.JTextField txt_cash;
+    private javax.swing.JTextField txt_change;
+    private javax.swing.JTextField txt_name;
+    private javax.swing.JTextField txt_price;
+    private javax.swing.JTextField txt_qty;
+    private javax.swing.JTextField txt_routecode;
+    private javax.swing.JTextField txt_seatnumber;
+    private javax.swing.JTextField txt_totalprice;
+    // End of variables declaration//GEN-END:variables
+
+    
+    String Button(String Button) {
+<span class="nc" id="L662">        return Button; //To change body of generated methods, choose Tools | Templates.</span>
+    }
+
+    String departure(String departure) {
+<span class="nc" id="L666">        return departure;</span>
+    }
+
+    
+
+    String destination(String destination) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L673">    return destination;</span>
+    }
+    String txt_price(String txt_price) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L677">    return txt_price;</span>
+    }
+    String txt_routecode(String txt_routecode) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L681">    return txt_routecode;</span>
+    }
+    String txt_seatnumber(String txt_seatnumber) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L685">    return txt_seatnumber;</span>
+    }
+    String txt_name(String txt_name) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L689">    return txt_name;</span>
+    }
+    String txt_qty(String txt_qty) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L693">    return txt_qty;</span>
+    }
+    String txt_totalprice(String txt_totalprice) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L697">    return txt_totalprice;</span>
+    }
+    String txt_cash(String txt_cash) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L701">    return txt_cash;</span>
+    }
+    String txt_change(String txt_change) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+<span class="nc" id="L705">    return txt_change;</span>
+    }
+    
+
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Receipt.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;TrainTicket&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">trainticketselling</a> &gt; <span class="el_source">Receipt.java</span></div><h1>Receipt.java</h1><pre class="source lang-java linenums">package trainticketselling;
+
+public class Receipt extends javax.swing.JFrame {
+    int x;
+
+<span class="nc" id="L6">    public Receipt() {</span>
+<span class="nc" id="L7">        initComponents();</span>
+<span class="nc" id="L8">        this.setLocationRelativeTo(null); //center form in the sreen</span>
+<span class="nc" id="L9">        Result();</span>
+<span class="nc" id="L10">    }</span>
+    
+    public void Result() {
+<span class="nc" id="L13">        txt_area.setText(</span>
+                &quot;PT. Kereta Api CCIT&quot;+&quot;\n&quot;+
+                &quot;Route Code     : &quot;+DataPT_KAC.nInt[x][0]+&quot;\n&quot;+
+                &quot;Departure      : &quot;+DataPT_KAC.nString[x][0]+&quot;\n&quot;+
+                &quot;Destination    : &quot;+DataPT_KAC.nString[x][1]+&quot;\n&quot;+
+                &quot;Date           : &quot;+DataPT_KAC.nString[x][2]+&quot; &quot;+DataPT_KAC.nString[x][3]+&quot;, 2019&quot;+&quot;\n&quot;+
+                &quot;Seat Number    : &quot;+DataPT_KAC.nInt[x][1]+&quot;\n&quot;+
+                &quot;Passenger Name : &quot;+DataPT_KAC.nString[x][4]+&quot;\n&quot;+
+                &quot;Qty            : &quot;+DataPT_KAC.nInt[x][2]+&quot;\n&quot;+
+                &quot;Total Price    : &quot;+DataPT_KAC.nInt[x][3]+&quot;\n&quot;+
+                &quot;Cash           : &quot;+DataPT_KAC.nInt[x][4]+&quot;\n&quot;+
+                &quot;Change         : &quot;+DataPT_KAC.nInt[x][5]+&quot;\n&quot;);    
+<span class="nc" id="L25">    }</span>
+    
+
+    @SuppressWarnings(&quot;unchecked&quot;)
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+<span class="nc" id="L32">        jPanel1 = new javax.swing.JPanel();</span>
+<span class="nc" id="L33">        jScrollPane1 = new javax.swing.JScrollPane();</span>
+<span class="nc" id="L34">        txt_area = new javax.swing.JTextArea();</span>
+<span class="nc" id="L35">        btn_close = new javax.swing.JButton();</span>
+
+<span class="nc" id="L37">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+
+<span class="nc" id="L39">        jPanel1.setBackground(new java.awt.Color(44, 62, 80));</span>
+
+<span class="nc" id="L41">        txt_area.setEditable(false);</span>
+<span class="nc" id="L42">        txt_area.setBackground(new java.awt.Color(108, 122, 137));</span>
+<span class="nc" id="L43">        txt_area.setColumns(20);</span>
+<span class="nc" id="L44">        txt_area.setFont(new java.awt.Font(&quot;Tw Cen MT Condensed&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L45">        txt_area.setRows(5);</span>
+<span class="nc" id="L46">        jScrollPane1.setViewportView(txt_area);</span>
+
+<span class="nc" id="L48">        btn_close.setBackground(new java.awt.Color(204, 204, 204));</span>
+<span class="nc" id="L49">        btn_close.setFont(new java.awt.Font(&quot;Franklin Gothic Demi&quot;, 0, 14)); // NOI18N</span>
+<span class="nc" id="L50">        btn_close.setText(&quot;Close&quot;);</span>
+<span class="nc" id="L51">        btn_close.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L53">                btn_closeActionPerformed(evt);</span>
+<span class="nc" id="L54">            }</span>
+        });
+
+<span class="nc" id="L57">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="nc" id="L58">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="nc" id="L59">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="nc" id="L60">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L61">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L62">                .addContainerGap()</span>
+<span class="nc" id="L63">                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)</span>
+<span class="nc" id="L64">                .addContainerGap())</span>
+<span class="nc" id="L65">            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L66">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="nc" id="L67">                .addComponent(btn_close)</span>
+<span class="nc" id="L68">                .addGap(152, 152, 152))</span>
+        );
+<span class="nc" id="L70">        jPanel1Layout.setVerticalGroup(</span>
+<span class="nc" id="L71">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L72">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="nc" id="L73">                .addContainerGap()</span>
+<span class="nc" id="L74">                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)</span>
+<span class="nc" id="L75">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="nc" id="L76">                .addComponent(btn_close)</span>
+<span class="nc" id="L77">                .addContainerGap())</span>
+        );
+
+<span class="nc" id="L80">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="nc" id="L81">        getContentPane().setLayout(layout);</span>
+<span class="nc" id="L82">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L83">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L84">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+<span class="nc" id="L86">        layout.setVerticalGroup(</span>
+<span class="nc" id="L87">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L88">            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+        );
+
+<span class="nc" id="L91">        pack();</span>
+<span class="nc" id="L92">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+
+    private void btn_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_closeActionPerformed
+<span class="nc" id="L95">        this.setVisible(false);</span>
+<span class="nc" id="L96">    }//GEN-LAST:event_btn_closeActionPerformed</span>
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //&lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot; Look and feel setting code (optional) &quot;&gt;
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+<span class="nc bnc" id="L108" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L109" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L110">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L111">                    break;</span>
+                }
+            }
+<span class="nc" id="L114">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L115">            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L116">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L117">            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L118">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L119">            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L120">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L121">            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L122">        }</span>
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+        //&lt;/editor-fold&gt;
+
+        /* Create and display the form */
+<span class="nc" id="L133">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+            public void run() {
+<span class="nc" id="L135">                new Receipt().setVisible(true);</span>
+<span class="nc" id="L136">            }</span>
+        });
+<span class="nc" id="L138">    }</span>
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_close;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txt_area;
+    // End of variables declaration//GEN-END:variables
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

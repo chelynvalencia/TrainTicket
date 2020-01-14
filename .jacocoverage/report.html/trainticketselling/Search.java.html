@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Search.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;TrainTicket&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">trainticketselling</a> &gt; <span class="el_source">Search.java</span></div><h1>Search.java</h1><pre class="source lang-java linenums">package trainticketselling;
+
+import trainticketselling.DataPT_KAC;
+import javax.swing.*;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.*;
+import java.util.*;
+
+public class Search extends DataPT_KAC {
+    JFrame ViewFrame;
+    JPanel ViewPanel;
+    int x;
+    
+<span class="nc" id="L15">    public Search(){</span>
+<span class="nc" id="L16">        SearchData();</span>
+<span class="nc" id="L17">    }</span>
+    
+    @Override
+    public void SearchData(){
+        JLabel RouteCode, Departure, Destination, Date, SeatNumber, Name, Qty, TotalPrice, Cash, Change;
+        JButton btn_close, btn_search;
+        final JTextArea txt_routecode, txt_departure, txt_destination, txt_date, txt_seatnumber, txt_name, txt_qty, txt_totalprice, txt_cash, txt_change;
+        JRadioButton Fe,Ma,M,S;
+        ButtonGroup bt,bt2;
+<span class="nc" id="L26">        ViewFrame = new JFrame();</span>
+<span class="nc" id="L27">        ViewPanel = new JPanel();     </span>
+<span class="nc" id="L28">        RouteCode = new JLabel(&quot;Route Code&quot;);</span>
+<span class="nc" id="L29">        Departure = new JLabel(&quot;Departure&quot;);</span>
+<span class="nc" id="L30">        Destination = new JLabel(&quot;Destination&quot;);</span>
+<span class="nc" id="L31">        Date = new JLabel(&quot;Date&quot;);</span>
+<span class="nc" id="L32">        SeatNumber = new JLabel(&quot;Seat Number&quot;);</span>
+<span class="nc" id="L33">        Name = new JLabel(&quot;Passenger Name&quot;);</span>
+<span class="nc" id="L34">        Qty = new JLabel(&quot;Qty&quot;);</span>
+<span class="nc" id="L35">        TotalPrice = new JLabel(&quot;Total Price&quot;);</span>
+<span class="nc" id="L36">        Cash = new JLabel(&quot;Cash&quot;);</span>
+<span class="nc" id="L37">        Change = new JLabel(&quot;Change&quot;);</span>
+
+<span class="nc" id="L39">        txt_routecode = new JTextArea(1,10);</span>
+<span class="nc" id="L40">        txt_departure = new JTextArea(1,20);</span>
+<span class="nc" id="L41">        txt_departure.setEditable(false);</span>
+<span class="nc" id="L42">        txt_destination = new JTextArea(1,20);</span>
+<span class="nc" id="L43">        txt_destination.setEditable(false);</span>
+<span class="nc" id="L44">        txt_date = new JTextArea(1,10);</span>
+<span class="nc" id="L45">        txt_date.setEditable(false);</span>
+<span class="nc" id="L46">        txt_seatnumber = new JTextArea(1,20);</span>
+<span class="nc" id="L47">        txt_seatnumber.setEditable(false);</span>
+<span class="nc" id="L48">        txt_name = new JTextArea(1,20);</span>
+<span class="nc" id="L49">        txt_name.setEditable(false);</span>
+<span class="nc" id="L50">        txt_qty = new JTextArea(1,20);</span>
+<span class="nc" id="L51">        txt_qty.setEditable(false);</span>
+<span class="nc" id="L52">        txt_totalprice = new JTextArea(1,20);</span>
+<span class="nc" id="L53">        txt_totalprice.setEditable(false);</span>
+<span class="nc" id="L54">        txt_cash = new JTextArea(1,20);</span>
+<span class="nc" id="L55">        txt_cash.setEditable(false);</span>
+<span class="nc" id="L56">        txt_change = new JTextArea(1,20);</span>
+<span class="nc" id="L57">        txt_change.setEditable(false);</span>
+  
+<span class="nc" id="L59">        btn_close = new JButton(&quot;Close&quot;);</span>
+<span class="nc" id="L60">        btn_close.addActionListener(new ActionListener(){  </span>
+            @Override
+            public void actionPerformed(ActionEvent a){
+<span class="nc" id="L63">                ViewFrame.setVisible(false);}</span>
+        });
+<span class="nc" id="L65">        btn_search = new JButton(&quot;Search&quot;);</span>
+<span class="nc" id="L66">        btn_search.addActionListener(new ActionListener(){  </span>
+            @Override
+            public void actionPerformed(ActionEvent b){
+                try {
+<span class="nc bnc" id="L70" title="All 2 branches missed.">                for (x=0;x&lt;=n;x++){</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">                    if(nInt[x][0]== Integer.parseInt(txt_routecode.getText()) ){</span>
+<span class="nc" id="L72">                    txt_departure.setText(nString[x][0]);</span>
+<span class="nc" id="L73">                    txt_destination.setText(nString[x][1]);</span>
+<span class="nc" id="L74">                    txt_date.setText(nString[x][2]+&quot; &quot;+nString[x][3]+&quot;, 2019&quot;);</span>
+<span class="nc" id="L75">                    txt_seatnumber.setText(String.valueOf(nInt[x][1]));</span>
+<span class="nc" id="L76">                    txt_name.setText(nString[x][4]);</span>
+<span class="nc" id="L77">                    txt_qty.setText(String.valueOf(nInt[x][2]));</span>
+<span class="nc" id="L78">                    txt_totalprice.setText(String.valueOf(nInt[x][3]));</span>
+<span class="nc" id="L79">                    txt_cash.setText(String.valueOf(nInt[x][4]));</span>
+<span class="nc" id="L80">                    txt_change.setText(String.valueOf(nInt[x][5]));}</span>
+            }
+        }              
+<span class="nc" id="L83">        catch(Exception e){            </span>
+<span class="nc" id="L84">        }</span>
+<span class="nc" id="L85">        }});</span>
+    
+<span class="nc" id="L87">        ViewFrame.setTitle(&quot;Search Data&quot;);</span>
+<span class="nc" id="L88">        ViewFrame.setVisible(true);</span>
+<span class="nc" id="L89">        ViewFrame.setSize(600,600);</span>
+<span class="nc" id="L90">        ViewFrame.add(ViewPanel);</span>
+    
+<span class="nc" id="L92">        ViewFrame.setLayout(new GridBagLayout());</span>
+<span class="nc" id="L93">        GridBagConstraints xy = new GridBagConstraints();</span>
+    
+<span class="nc" id="L95">        xy.gridx=0;</span>
+<span class="nc" id="L96">        xy.gridy=1;</span>
+<span class="nc" id="L97">        xy.fill=xy.HORIZONTAL;</span>
+<span class="nc" id="L98">        xy.weighty=0.1;</span>
+<span class="nc" id="L99">        ViewFrame.add(RouteCode,xy);</span>
+    
+<span class="nc" id="L101">        xy.gridx=1;</span>
+<span class="nc" id="L102">        xy.gridy=1;</span>
+<span class="nc" id="L103">        ViewFrame.add(txt_routecode,xy);</span>
+    
+<span class="nc" id="L105">        xy.gridx=1;</span>
+<span class="nc" id="L106">        xy.gridy=2;</span>
+<span class="nc" id="L107">        ViewFrame.add(btn_search,xy);</span>
+    
+<span class="nc" id="L109">        xy.gridx=0;</span>
+<span class="nc" id="L110">        xy.gridy=3;</span>
+<span class="nc" id="L111">        ViewFrame.add(Departure,xy);</span>
+    
+<span class="nc" id="L113">        xy.gridx=1;</span>
+<span class="nc" id="L114">        xy.gridy=3;</span>
+<span class="nc" id="L115">        ViewFrame.add(txt_departure,xy);</span>
+    
+<span class="nc" id="L117">        xy.gridx=0;</span>
+<span class="nc" id="L118">        xy.gridy=4;</span>
+<span class="nc" id="L119">        ViewFrame.add(Destination,xy);</span>
+    
+<span class="nc" id="L121">        xy.gridx=1;</span>
+<span class="nc" id="L122">        xy.gridy=4;</span>
+<span class="nc" id="L123">        ViewFrame.add(txt_destination,xy);</span>
+    
+<span class="nc" id="L125">        xy.gridx=0;</span>
+<span class="nc" id="L126">        xy.gridy=5;</span>
+<span class="nc" id="L127">        ViewFrame.add(Date,xy);</span>
+    
+<span class="nc" id="L129">        xy.gridx=1;</span>
+<span class="nc" id="L130">        xy.gridy=5;</span>
+<span class="nc" id="L131">        ViewFrame.add(txt_date,xy);</span>
+    
+<span class="nc" id="L133">        xy.gridx=0;</span>
+<span class="nc" id="L134">        xy.gridy=6;</span>
+<span class="nc" id="L135">        ViewFrame.add(SeatNumber,xy);</span>
+    
+<span class="nc" id="L137">        xy.gridx=1;</span>
+<span class="nc" id="L138">        xy.gridy=6;</span>
+<span class="nc" id="L139">        ViewFrame.add(txt_seatnumber,xy);</span>
+        
+<span class="nc" id="L141">        xy.gridx=0;</span>
+<span class="nc" id="L142">        xy.gridy=7;</span>
+<span class="nc" id="L143">        ViewFrame.add(Name,xy);</span>
+    
+<span class="nc" id="L145">        xy.gridx=1;</span>
+<span class="nc" id="L146">        xy.gridy=7;</span>
+<span class="nc" id="L147">        ViewFrame.add(txt_name,xy);</span>
+        
+<span class="nc" id="L149">        xy.gridx=0;</span>
+<span class="nc" id="L150">        xy.gridy=8;</span>
+<span class="nc" id="L151">        ViewFrame.add(Qty,xy);</span>
+    
+<span class="nc" id="L153">        xy.gridx=1;</span>
+<span class="nc" id="L154">        xy.gridy=8;</span>
+<span class="nc" id="L155">        ViewFrame.add(txt_qty,xy);</span>
+        
+<span class="nc" id="L157">        xy.gridx=0;</span>
+<span class="nc" id="L158">        xy.gridy=9;</span>
+<span class="nc" id="L159">        ViewFrame.add(TotalPrice,xy);</span>
+    
+<span class="nc" id="L161">        xy.gridx=1;</span>
+<span class="nc" id="L162">        xy.gridy=9;</span>
+<span class="nc" id="L163">        ViewFrame.add(txt_totalprice,xy);</span>
+        
+<span class="nc" id="L165">        xy.gridx=0;</span>
+<span class="nc" id="L166">        xy.gridy=10;</span>
+<span class="nc" id="L167">        ViewFrame.add(Cash,xy);</span>
+    
+<span class="nc" id="L169">        xy.gridx=1;</span>
+<span class="nc" id="L170">        xy.gridy=10;</span>
+<span class="nc" id="L171">        ViewFrame.add(txt_cash,xy);</span>
+        
+<span class="nc" id="L173">        xy.gridx=0;</span>
+<span class="nc" id="L174">        xy.gridy=11;</span>
+<span class="nc" id="L175">        ViewFrame.add(Change,xy);</span>
+    
+<span class="nc" id="L177">        xy.gridx=1;</span>
+<span class="nc" id="L178">        xy.gridy=11;</span>
+<span class="nc" id="L179">        ViewFrame.add(txt_change,xy);</span>
+   
+<span class="nc" id="L181">        xy.gridx=1;</span>
+<span class="nc" id="L182">        xy.gridy=12;</span>
+<span class="nc" id="L183">        xy.anchor=xy.CENTER;</span>
+<span class="nc" id="L184">        ViewFrame.add(btn_close,xy);</span>
+    
+<span class="nc" id="L186">}</span>
+    public static void main(String[] args) {
+        // TODO code application logic here
+<span class="nc" id="L189">       Search ts = new Search();</span>
+<span class="nc" id="L190">    }</span>
+
+    void setVisible(boolean b) {
+<span class="nc" id="L193">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
+    }
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
